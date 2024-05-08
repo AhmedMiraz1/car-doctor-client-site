@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Service = ({ service }) => {
   console.log(service);
 
-  const {img, title, price}=service
+  const {_id,img, title, price}=service
   return (
     <div className="card bg-base-100 shadow-xl p-4 border mt-8">
       <figure className="">
@@ -19,7 +19,7 @@ const Service = ({ service }) => {
         <div className="flex justify-between text-xl font-semibold text-[#FF3811]  items-center">
         <p className=""> Price : ${price}</p>
        
-       <Link className=""><FaArrowRight/></Link>
+       <Link to={`/checkout/${_id}`} className=""><FaArrowRight/></Link>
         </div>
       
       </div>
